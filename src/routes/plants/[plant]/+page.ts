@@ -27,6 +27,7 @@ export type PlantData = {
 	site: {
 		description: string;
 		light: string;
+		humidity?: string;
 	};
 };
 

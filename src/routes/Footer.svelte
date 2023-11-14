@@ -3,7 +3,7 @@
     <a href="https://trivernis.net">My Website</a>
   </div>
   <div class="footer-item float-right">
-    <a href="https://git.trivernis.net/trivernis/plantwiki">Source</a>
+    <a href="https://git.trivernis.net/trivernis/plantwiki-svelte">Source</a>
   </div>
 </footer>
 

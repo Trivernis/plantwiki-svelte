@@ -1,5 +1,7 @@
 <script lang="ts">
   import type { PageData } from "./$types";
+  import Badge from "./Badge.svelte";
+  import TempBar from "./TempBar.svelte";
 
   export let data: PageData;
   const image = data.image;
@@ -21,6 +23,30 @@
       </a>
     {/if}
   </figure>
+  <section>
+    <a href="#site"><h2 id="site">Site</h2></a>
+    <TempBar temp={data.temp} />
+
+    {#if data.site.light}
+      <Badge
+        icon="sun"
+        text={data.site.light}
+        alt="Prefers {data.site.light} lighting conditions."
+      />
+    {/if}
+
+    {#if data.site.humidity}
+      <Badge
+        icon="drop"
+        text={data.site.humidity}
+        alt="Prefers {data.site.light} humidity."
+      />
+    {/if}
+
+    <p>
+      {@html data.site.description}
+    </p>
+  </section>
 </div>
 
 <style lang="scss">
