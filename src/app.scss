@@ -1,0 +1,27 @@
+@use "./colors.scss";
+@import "https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css";
+
+body {
+  font-family: "Noto Sans", "Verdana", sans-serif;
+  background-color: colors.$background;
+  color: colors.$text;
+}
+
+img {
+  image-orientation: from-image;
+}
+
+a {
+  text-decoration-line: underline;
+  text-decoration-color: colors.$secondary;
+  text-decoration-thickness: .125em;
+  color: colors.$text;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
