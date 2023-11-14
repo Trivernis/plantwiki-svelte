@@ -1,0 +1,34 @@
+[aloe-vera]
+name = "Aloe Vera"
+bin_name = "Aloe Vera"
+
+[aloe-vera.image]
+small = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Aloe_Vera_%284700054020%29.jpg/320px-Aloe_Vera_%284700054020%29.jpg"
+medium = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Aloe_Vera_%284700054020%29.jpg/1024px-Aloe_Vera_%284700054020%29.jpg"
+large = "https://upload.wikimedia.org/wikipedia/commons/d/d2/Aloe_Vera_%284700054020%29.jpg"
+source = "https://commons.wikimedia.org/wiki/File:Aloe_Vera_(4700054020).jpg"
+alt = """
+Aloe Vera. \
+Tentacle-like succulent leaves sprout out from the base of the plant \
+going up at multiple angles.
+"""
+
+[aloe-vera.temp]
+death = 5
+lower = 12
+upper = 29
+
+[aloe-vera.site]
+description = """
+Aloe Vera prefers to grow in direct sunlight at temperatures between 12°C and 29°C. Temperatures below 5°C might kill the plant. Aloe Vera doesn't have any special humidity preferences.
+"""
+light = "full or part sun"
+humidity = "any"
+
+
+[aloe-vera.care]
+description = """
+Aloe Vera needs to be watered about ever 16 days. Make sure the soil is almost completely dry before watering it as it can be overwatered easily.
+"""
+water_schedule = "16 days"
+fertilize_schedule = "month"
