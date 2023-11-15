@@ -1,5 +1,6 @@
 <script lang="ts">
-  import type { PlantData } from "./proxy+page";
+  import type { PlantData } from "$lib/plants";
+
   export let temp: PlantData["temp"];
 </script>
 

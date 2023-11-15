@@ -7,9 +7,10 @@ export type PlantData = {
 	bin_name: string;
 
 	image: {
-		small: string;
-		medium: string;
-		large: string;
+		local?: string;
+		remote?: string;
+		format?: string;
+		width?: number;
 		source: string;
 		alt: string;
 	};

@@ -3,9 +3,9 @@ name = "Monstera Deliciosa"
 bin_name = "Monstera Deliciosa"
 
 [image]
-small = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/New_Monstera_Deliciosa_Leaf.jpg/360px-New_Monstera_Deliciosa_Leaf.jpg"
-medium = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/New_Monstera_Deliciosa_Leaf.jpg/768px-New_Monstera_Deliciosa_Leaf.jpg"
-large = "https://upload.wikimedia.org/wikipedia/commons/d/d4/New_Monstera_Deliciosa_Leaf.jpg"
+remote = "https://upload.wikimedia.org/wikipedia/commons/d/d4/New_Monstera_Deliciosa_Leaf.jpg"
+format = "json"
+width = 1512
 source = "https://commons.wikimedia.org/wiki/File:New_Monstera_Deliciosa_Leaf.jpg"
 alt = """
 Monstera deliciosa. \

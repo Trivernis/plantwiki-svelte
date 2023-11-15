@@ -3,9 +3,8 @@ name = "Aloe Vera"
 bin_name = "Aloe Vera"
 
 [image]
-small = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Aloe_Vera_%284700054020%29.jpg/320px-Aloe_Vera_%284700054020%29.jpg"
-medium = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Aloe_Vera_%284700054020%29.jpg/1024px-Aloe_Vera_%284700054020%29.jpg"
-large = "https://upload.wikimedia.org/wikipedia/commons/d/d2/Aloe_Vera_%284700054020%29.jpg"
+local = "aloe-vera.jpg"
+format = "jpeg"
 source = "https://commons.wikimedia.org/wiki/File:Aloe_Vera_(4700054020).jpg"
 alt = """
 Aloe Vera. \

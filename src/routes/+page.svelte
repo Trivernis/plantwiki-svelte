@@ -1,5 +1,11 @@
 <script lang="ts">
   import { plants } from "$lib/plants";
+  import Img from "@zerodevx/svelte-img";
+  const images = import.meta.glob("$lib/assets/images/*.{png,jpg,jpeg,webp}", {
+    import: "default",
+    eager: true,
+    query: { w: 256, h: 128, fit: "cover", as: "run:2", normalize: true },
+  });
 </script>
 
 <h1>Plantwiki</h1>
@@ -8,9 +14,16 @@
     <div class="plant-item-wrapper">
       <div class="plant-item">
         <a class="plant-link" href="/plants/{plant.slug}">
-          <img
-            class="plant-image"
-            src={plant.image.small}
+          <Img
+            class="sv-image"
+            src={images[`/src/lib/assets/images/${plant.image.local}`] ?? {
+              img: { src: plant.image.remote, w: plant.image.width },
+              sources: {
+                [plant.image.format ?? "jpeg"]: [
+                  { src: plant.image.remote, w: plant.image.width },
+                ],
+              },
+            }}
             alt={plant.image.alt}
           />
           <h2 class="plant-title">{plant.name}</h2>
@@ -44,6 +57,7 @@
       height: 128px;
       width: 256px;
       user-select: none;
+      overflow: hidden;
 
       &:hover {
         margin: 0.75em 1.25em 0.75em 0.75em;
@@ -63,12 +77,6 @@
         display: block;
         position: relative;
 
-        img {
-          border-radius: 0.5em;
-          height: 128px;
-          width: 256px;
-          object-fit: cover;
-        }
         h2.plant-title {
           transition-duration: 0.25s;
           position: absolute;
@@ -109,5 +117,15 @@
         }
       }
     }
+  }
+  :global(.plants-list .sv-image) {
+    border-radius: 0.5em;
+    height: 128px;
+    width: 256px;
+    object-fit: cover;
+
+    --reveal-transform: scale(1.02);
+    --reveal-transition: opacity 1s ease-in, transform 0.8s ease-out;
+    --reveal-filter: blur(20px);
   }
 </style>

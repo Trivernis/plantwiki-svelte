@@ -3,7 +3,6 @@ import type { PageLoad } from "./$types";
 import { plants, type PlantData } from "$lib/plants";
 
 export const load: PageLoad = ({ params }) => {
-	console.log(plants);
 	if (plants[params.plant]) {
 		return plants[params.plant] as PlantData;
 	}
