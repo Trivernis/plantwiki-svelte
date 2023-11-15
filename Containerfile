@@ -18,7 +18,5 @@ COPY --from=builder /app/build /app
 EXPOSE 3000
 
 ENV ORIGIN=""
-ENV PROTOCOL_HEADER=x-forwarded-proto
-ENV HOST_HEADER=x-forwarded-host
 
 CMD ["node", "."]

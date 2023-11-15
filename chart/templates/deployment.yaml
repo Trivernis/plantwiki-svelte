@@ -36,7 +36,7 @@ spec:
           env:
             {{- with .Values.plantwiki.domain }}
             - name: HOST
-              value: {{ .Values.plantwiki.domain }}
+              value: "{{ .Values.plantwiki.domain }}"
             {{- end }}
           ports:
             - name: http
