@@ -1,6 +1,6 @@
 {
 	"name": "plantwiki-svelte",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
@@ -15,7 +15,6 @@
 		"@sveltejs/kit": "^1.27.4",
 		"@zerodevx/svelte-img": "^2.1.0",
 		"drab": "^4.1.4",
-		"lorem-ipsum": "^2.0.8",
 		"sass": "^1.69.5",
 		"svelte": "^4.0.5",
 		"svelte-check": "^3.6.0",
