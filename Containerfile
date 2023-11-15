@@ -17,6 +17,4 @@ RUN npm ci --omit dev
 COPY --from=builder /app/build /app
 EXPOSE 3000
 
-ENV ORIGIN=""
-
 CMD ["node", "."]
