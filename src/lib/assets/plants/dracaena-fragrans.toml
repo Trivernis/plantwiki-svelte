@@ -1,0 +1,46 @@
+slug = "dracaena-fragrans"
+name = "Dracaena Fragrans"
+bin_name = "Dracaena Fragrans"
+
+[image]
+remote = "https://upload.wikimedia.org/wikipedia/commons/6/64/Dracaena_fragrans_a1.jpg"
+source = "https://commons.wikimedia.org/wiki/File:Dracaena_fragrans_a1.jpg"
+alt = """
+Dracaena Fragrans. \
+A plant with long leaves with a dark green middle part and \
+yellow edges on the leaves. The plant grows a green stalk with \
+leaves on it."""
+
+[temp]
+death = 10
+lower = 18
+upper = 25
+
+[site]
+description = """
+Dracaena Fragrans grows best in a shade with at most some direct sun exposure. It can grow in normal humidity. If Dracaena Fragrans gets too much light, its leaves will be scorced. If it get's too little light newly grown leaves will be smaller.
+"""
+light = "shade, some sun"
+humidity = "normal"
+
+
+[care]
+description = """
+Dracaena Fragrans needs to be watered every twelve days when the top layer starts to dry out. But on't let the soil dry out completely. To increase humidity mist the plant weekly. It can be fertilized ever month with common fertilizer.
+"""
+water_schedule = "12 days"
+mist_schedule = "week"
+fertilize_schedule = "month"
+
+[common_issues]
+description = """
+### Root Rot
+
+Signs for root rot might be yellow and dull leaves. In that case check the
+roots for any visible rot (mushy roots are an indicator). The plant can be saved
+by cutting away the rotten roots.
+
+### Pests
+
+Frequently Check the underside of leaves for any infestations. 
+"""

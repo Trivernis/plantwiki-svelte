@@ -1,8 +1,11 @@
-import aloeVera from "$lib/assets/plants/aloe-vera.toml";
-import monsteraDeliciosa from "$lib/assets/plants/monstera-deliciosa.toml";
 import { isLeft } from "fp-ts/lib/Either";
 import * as t from "io-ts";
 import { PathReporter } from "io-ts/lib/PathReporter";
+
+const plantModules = import.meta.glob("$lib/assets/plants/*.toml", {
+	import: "default",
+	eager: true,
+});
 
 const PlantDataTS = t.type({
 	slug: t.string,
@@ -34,21 +37,27 @@ const PlantDataTS = t.type({
 		light: t.string,
 		humidity: t.union([t.string, t.undefined]),
 	}),
+	common_issues: t.union([
+		t.type({
+			description: t.string,
+		}),
+		t.undefined,
+	]),
 });
 
 export type PlantData = t.TypeOf<typeof PlantDataTS>;
 
 type PlantMap = { [key: PlantData["slug"]]: PlantData };
 
-export const plants: PlantMap = [aloeVera, monsteraDeliciosa].reduce(
-	(acc, cur) => {
+export const plants: PlantMap = Object.values(plantModules).reduce(
+	(acc: PlantMap, cur) => {
 		const decoded = PlantDataTS.decode(cur);
 		if (isLeft(decoded)) {
 			throw Error(
 				`Invalid plant data ${PathReporter.report(decoded).join("\n")}`,
 			);
 		}
-		acc[cur.slug] = decoded.right;
+		acc[decoded.right.slug] = decoded.right;
 		return acc;
 	},
 	{} as PlantMap,
