@@ -1,39 +1,24 @@
 <script lang="ts">
   import type { PageData } from "./$types";
   import Badge from "./Badge.svelte";
+  import PlantImage from "./PlantImage.svelte";
   import TempBar from "./TempBar.svelte";
 
   export let data: PageData;
-  const image = data.image;
 </script>
 
 <div class="card">
   <h1>{data.name} (<i>{data.bin_name}</i>)</h1>
-
-  <figure class="plant-image">
-    <img src={image.medium} alt={data.image.alt} title={data.bin_name} />
-
-    {#if data.image.source != ""}
-      <a
-        class="image-source"
-        href={data.image.source}
-        aria-label="Image Source"
-      >
-        Source
-      </a>
-    {/if}
-  </figure>
+  <PlantImage image={data.image} />
   <section>
     <a href="#site"><h2 id="site">Site</h2></a>
     <TempBar temp={data.temp} />
 
-    {#if data.site.light}
-      <Badge
-        icon="sun"
-        text={data.site.light}
-        alt="Prefers {data.site.light} lighting conditions."
-      />
-    {/if}
+    <Badge
+      icon="sun"
+      text={data.site.light}
+      alt="Prefers {data.site.light} lighting conditions."
+    />
 
     {#if data.site.humidity}
       <Badge
@@ -47,44 +32,31 @@
       {@html data.site.description}
     </p>
   </section>
+  <section>
+    <a href="#care"><h2 id="care">Care</h2></a>
+
+    <Badge
+      icon="drizzle"
+      text="every {data.care.water_schedule}"
+      alt="Water every {data.care.water_schedule}."
+    />
+
+    {#if data.care.mist_schedule}
+      <Badge
+        icon="mist"
+        text="every {data.care.mist_schedule}"
+        alt="Mist every {data.care.mist_schedule}."
+      />
+    {/if}
+
+    {#if data.care.clean_schedule}
+      <Badge
+        icon="brush-2"
+        text="every {data.care.clean_schedule}"
+        alt="Clean every {data.care.clean_schedule}."
+      />
+    {/if}
+
+    <p>{data.care.description}</p>
+  </section>
 </div>
-
-<style lang="scss">
-  @use "../../../colors.scss";
-  .plant-image {
-    width: 100%;
-    aspect-ratio: 2 / 1;
-    display: flex;
-    margin: auto;
-    border-radius: 0.5em;
-    color: colors.$highlight-text;
-    box-shadow: 0.5em 0.5em colors.$highlight;
-    position: relative;
-
-    a {
-      color: colors.$highlight-text;
-    }
-
-    .image-source {
-      position: absolute;
-      padding: 0.25em;
-      border-radius: 0.25em;
-      margin: 0.25em;
-      bottom: 0;
-      right: 0;
-      font-size: 0.8em;
-      background-color: transparentize(colors.$highlight, 0.75);
-      transition-duration: 0.5s;
-    }
-
-    img {
-      border-radius: 0.5em;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    &:hover .image-source {
-      background-color: colors.$highlight;
-    }
-  }
-</style>

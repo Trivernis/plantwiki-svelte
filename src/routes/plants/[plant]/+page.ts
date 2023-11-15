@@ -22,7 +22,9 @@ export type PlantData = {
 	care: {
 		description: string;
 		water_schedule: string;
+		mist_schedule?: string;
 		fertilize_schedule?: string;
+		clean_schedule?: string;
 	};
 	site: {
 		description: string;

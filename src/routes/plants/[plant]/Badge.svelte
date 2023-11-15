@@ -4,7 +4,7 @@
   export let text: string;
 </script>
 
-<div class="badge" aria-label={alt}>
+<div class="badge" title={alt}>
   <i class="ri-{icon}-fill icon" aria-hidden="true" /><span aria-hidden="true">
     {@html text}
   </span>
