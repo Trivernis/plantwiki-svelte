@@ -3,6 +3,7 @@ name = "Monstera Deliciosa"
 bin_name = "Monstera Deliciosa"
 
 [image]
+local = "monstera-deliciosa.jpg"
 remote = "https://upload.wikimedia.org/wikipedia/commons/d/d4/New_Monstera_Deliciosa_Leaf.jpg"
 format = "jpeg"
 width = 1512

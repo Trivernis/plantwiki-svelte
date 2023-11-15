@@ -1,10 +1,10 @@
 <script lang="ts">
+  import LazyImage from "$lib/components/LazyImage.svelte";
   import { plants } from "$lib/plants";
-  import Img from "@zerodevx/svelte-img";
   const images = import.meta.glob("$lib/assets/images/*.{png,jpg,jpeg,webp}", {
     import: "default",
     eager: true,
-    query: { w: 256, h: 128, fit: "cover", as: "run:2", normalize: true },
+    query: { w: 256, h: 128, fit: "cover", as: "run", normalize: true },
   });
 </script>
 
@@ -14,7 +14,7 @@
     <div class="plant-item-wrapper">
       <div class="plant-item">
         <a class="plant-link" href="/plants/{plant.slug}">
-          <Img
+          <LazyImage
             class="sv-image"
             src={images[`/src/lib/assets/images/${plant.image.local}`] ?? {
               img: { src: plant.image.remote, w: plant.image.width },

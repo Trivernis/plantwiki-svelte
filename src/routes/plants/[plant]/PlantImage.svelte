@@ -1,13 +1,13 @@
 <script lang="ts">
+  import LazyImage from "$lib/components/LazyImage.svelte";
   import type { PlantData } from "$lib/plants";
-  import Img from "@zerodevx/svelte-img";
 
   export let image: PlantData["image"];
 
   const images = import.meta.glob("$lib/assets/images/*.{png,jpg,jpeg,webp}", {
     import: "default",
     eager: true,
-    query: { w: 1024, h: 512, fit: "cover", as: "run:2", normalize: true },
+    query: { w: 1024, h: 512, fit: "cover", as: "run", normalize: true },
   });
 
   const src = images[`/src/lib/assets/images/${image.local}`] ?? {
@@ -20,7 +20,7 @@
 
 <figure class="plant-image">
   <div class="image-wrap">
-    <Img class="sv-image" {src} alt={image.alt} />
+    <LazyImage class="sv-image" {src} alt={image.alt} />
   </div>
 
   {#if image.source != ""}
@@ -70,11 +70,13 @@
       background-color: colors.$highlight;
     }
   }
+
   :global(.plant-image picture) {
     width: 100%;
     height: auto;
     aspect-ratio: 2 / 1;
   }
+
   :global(.sv-image) {
     width: 100%;
     height: auto;

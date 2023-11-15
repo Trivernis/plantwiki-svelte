@@ -3,6 +3,7 @@ name = "Dracaena Fragrans"
 bin_name = "Dracaena Fragrans"
 
 [image]
+local = "dracaena-fragrans.jpg"
 remote = "https://upload.wikimedia.org/wikipedia/commons/6/64/Dracaena_fragrans_a1.jpg"
 source = "https://commons.wikimedia.org/wiki/File:Dracaena_fragrans_a1.jpg"
 alt = """
