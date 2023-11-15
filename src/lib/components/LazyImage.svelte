@@ -15,14 +15,31 @@
 
   let imgref: Img;
   let loaded: boolean = false;
+  let quickloaded: boolean = false;
+  let loadStart = Date.now();
 
   onMount(() => {
-    if (imgref && imgref.complete) loaded = true;
+    loadStart = Date.now();
+    if (imgref && imgref.complete) quickloaded = true;
   });
 </script>
 
-<Img bind:imgref {src} {alt} {...$$restProps} on:load={() => (loaded = true)} />
-<div class="blur" class:loaded />
+<Img
+  bind:imgref
+  {src}
+  {alt}
+  {...$$restProps}
+  on:load={() => {
+    if (Date.now() - loadStart > 500) {
+      console.log("slow");
+      loaded = true;
+    } else {
+      console.log("quick");
+      quickloaded = true;
+    }
+  }}
+/>
+<div class="blur" class:loaded class:quickloaded />
 
 <style lang="scss">
   @use "../../colors.scss";
@@ -33,26 +50,19 @@
     inset: 0;
     backdrop-filter: blur(20px);
     pointer-events: none;
-    transition-duration: 0.8s;
     opacity: 1;
     animation: loading;
     animation-duration: 0.8s;
     animation-iteration-count: infinite;
   }
+  .quickloaded {
+    opacity: 0;
+  }
   .loaded {
     opacity: 0;
-    animation: fade 2s bezier;
+    transition-duration: 1s;
   }
 
-  @keyframes fade {
-    0%,
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
   @keyframes loading {
     0%,
     100% {

@@ -14,7 +14,7 @@
     aria-hidden="true"
   >
     <p>
-      <i class="ri-skull-fill icon" aria-hidden="true" /> &lt; {temp.death}} °C
+      <i class="ri-skull-fill icon" aria-hidden="true" /> &lt; {temp.death} °C
     </p>
   </div>
   <div
