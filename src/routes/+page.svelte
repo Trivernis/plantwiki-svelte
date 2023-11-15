@@ -1,6 +1,7 @@
 <script lang="ts">
   import LazyImage from "$lib/components/LazyImage.svelte";
   import { plants } from "$lib/plants";
+
   const images = import.meta.glob("$lib/assets/images/*.{png,jpg,jpeg,webp}", {
     import: "default",
     eager: true,
@@ -8,8 +9,15 @@
   });
 </script>
 
-<h1>Plantwiki</h1>
+<h1 class="title">Welcome to the plant wiki!</h1>
+<p>
+  This is where I put the information I need to take care of my houseplants. And
+  to share with others.
+</p>
+
+<hr />
 <div class="plants-list">
+  <h2>Plants</h2>
   {#each Object.entries(plants) as [key, plant] (key)}
     <div class="plant-item-wrapper">
       <div class="plant-item">
@@ -35,6 +43,10 @@
 
 <style lang="scss">
   @use "../colors.scss";
+
+  .title {
+    font-size: 2em;
+  }
 
   .plants-list {
     width: 100%;

@@ -19,7 +19,10 @@
   });
 </script>
 
-<Header />
+<Header>
+  <slot slot="header-items" name="header-items" />
+</Header>
+
 <section class="main">
   <slot />
 </section>

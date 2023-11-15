@@ -18,6 +18,30 @@ a {
   color: colors.$text;
 }
 
+hr {
+  border: 1px solid colors.$highlight;
+}
+
+button {
+  background-color: colors.$highlight;
+  color: colors.$highlight-text;
+  border: none;
+  height: 2.5em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  transition-duration: 0.25s;
+  font-size: 1em;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten(colors.$highlight, 5%);
+  }
+
+  &:active {
+    background-color: darken(colors.$highlight, 5%);
+  }
+}
+
 .float-left {
   float: left;
 }
@@ -28,7 +52,7 @@ a {
 
 
 .card {
-  width: 50%;
+  width: 60%;
   margin: auto;
 }
 

@@ -1,7 +1,21 @@
+<script lang="ts">
+  import { ShareButton } from "drab";
+  import { page } from "$app/stores";
+
+  $: shareData = {
+    text: $page.data.title,
+    title: $page.data.title,
+    url: `${$page.url.protocol}//${$page.url.host}${$page.url.pathname}`,
+  };
+</script>
+
 <header>
   <ul class="navbar">
-    <li>
+    <li class="float-left">
       <a href="/">Home</a>
+    </li>
+    <li class="float-right">
+      <ShareButton class="header-share-button" {shareData} />
     </li>
   </ul>
 </header>
@@ -24,7 +38,6 @@
 
     li {
       display: inline;
-      float: left;
 
       a {
         display: block;
@@ -40,6 +53,21 @@
     }
     li.selected a {
       background-color: lighten(colors.$highlight, 5%);
+    }
+  }
+
+  :global(.header-share-button) {
+    float: right;
+    font-size: 1em;
+    padding: 1em 2em;
+    height: 100%;
+    font-weight: bold;
+    color: colors.$highlight-text;
+    border-radius: 0;
+    margin-top: 1px;
+
+    &:hover {
+      background-color: darken(colors.$highlight, 5%);
     }
   }
 </style>

@@ -5,13 +5,18 @@
   import Section from "./Section.svelte";
   import TempBar from "./TempBar.svelte";
   import SvelteMarkdown from "svelte-markdown";
+  import { ShareButton } from "drab";
 
   export let data: PageData;
 </script>
 
 <div class="card">
-  <h1>{data.name} (<i>{data.bin_name}</i>)</h1>
+  <h1>
+    {data.name} (<i>{data.bin_name}</i>)
+  </h1>
+
   <PlantImage image={data.image} />
+
   <Section title="Site">
     <div slot="subheading">
       <TempBar temp={data.temp} />
@@ -68,3 +73,6 @@
     </Section>
   {/if}
 </div>
+
+<style lang="scss">
+</style>
