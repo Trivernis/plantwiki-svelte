@@ -1,0 +1,36 @@
+slug = "monstera-deliciosa"
+name = "Monstera Deliciosa"
+bin_name = "Monstera Deliciosa"
+
+[image]
+small = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/New_Monstera_Deliciosa_Leaf.jpg/360px-New_Monstera_Deliciosa_Leaf.jpg"
+medium = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/New_Monstera_Deliciosa_Leaf.jpg/768px-New_Monstera_Deliciosa_Leaf.jpg"
+large = "https://upload.wikimedia.org/wikipedia/commons/d/d4/New_Monstera_Deliciosa_Leaf.jpg"
+source = "https://commons.wikimedia.org/wiki/File:New_Monstera_Deliciosa_Leaf.jpg"
+alt = """
+Monstera deliciosa. \
+A big leaf with gaps is shown in the middle \
+with other leaves in the back. The leaf is heart-shaped. \
+The plant is potted in a pot with a moss stick.\
+"""
+
+[temp]
+death = 10
+lower = 18
+upper = 24
+
+[site]
+description = """
+Monstera is best positioned in an area with changing shade and sunny conditions. It is best kept indoors at temperatures between 18°C and 24°C. Temperatures below 10°C might damage the plant. Monstera prefers high humidity which can be achieved by misting the plant regularly. Every 16 days common plant fertilizer can be applied.
+"""
+light = "shade, some sun"
+humidity = "high"
+
+[care]
+description = """
+ On average Monstera needs to be watered every 8 days. Ideally when the top layer of the dirt has dried out. Monstera is used to growing in high humidity climate. Misting every week will increase the health of the plant as it rasises the humditity. Make sure to remove dead leaves and branches about every 3 months. 
+"""
+water_schedule = "8 days"
+mist_schedule = "week"
+fertilize_schedule = "16 days"
+clean_schedule = "3 months"
