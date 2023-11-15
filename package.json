@@ -23,5 +23,9 @@
 		"vite": "^4.4.2",
 		"vite-plugin-toml": "^0.6.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"fp-ts": "^2.16.1",
+		"io-ts": "^2.2.20"
+	}
 }

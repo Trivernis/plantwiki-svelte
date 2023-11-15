@@ -4,7 +4,7 @@ bin_name = "Monstera Deliciosa"
 
 [image]
 remote = "https://upload.wikimedia.org/wikipedia/commons/d/d4/New_Monstera_Deliciosa_Leaf.jpg"
-format = "json"
+format = "jpeg"
 width = 1512
 source = "https://commons.wikimedia.org/wiki/File:New_Monstera_Deliciosa_Leaf.jpg"
 alt = """
