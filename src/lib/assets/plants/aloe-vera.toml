@@ -4,6 +4,7 @@ bin_name = "Aloe Vera"
 
 [image]
 local = "aloe-vera.jpg"
+remote = "https://upload.wikimedia.org/wikipedia/commons/d/d2/Aloe_Vera_%284700054020%29.jpg"
 format = "jpeg"
 source = "https://commons.wikimedia.org/wiki/File:Aloe_Vera_(4700054020).jpg"
 alt = """

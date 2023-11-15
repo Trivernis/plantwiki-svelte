@@ -1,0 +1,66 @@
+slug = "spathiphyllum-wallisii"
+name = "Peace Lily"
+bin_name = "Spathiphyllum Wallisii"
+
+[image]
+local = "spathiphyllum-wallisii.jpg"
+remote = "https://upload.wikimedia.org/wikipedia/commons/2/27/Spathiphyllum_wallisii2749939692.jpg"
+format = "jpeg"
+width = 1512
+source = "https://commons.wikimedia.org/wiki/File:Spathiphyllum_wallisii2749939692.jpg"
+alt = """
+Peace Lily. \
+A plant with dark green leaves in an almond shape. \
+Its flowers are white standing upright with one petal and a spiky \
+cream-white stamp in the middle attached to long stalks.
+"""
+
+[temp]
+death = 0
+lower = 18
+upper = 24
+
+[site]
+light = "bright indirect"
+humidity = "humid"
+description = """
+The Peace Lily prefers bright indirect light. It can adapt to lower light conditions.
+Direct sunlight will burn the plant.
+Peace Lily thrives in temperatures between 18°C and 24°C. It can survive temperatures 
+as low as 0°C.
+The plant is used to a high humidity environment. Make sure to mist the plant regularly
+or use humidifiers.
+"""
+
+[care]
+water_schedule = "4 days"
+fertilize_schedule = "11 days"
+mist_schedule = "week"
+clean_schedule = "month"
+description = """
+The Peace Lily needs to be watered twice a week. Water it when the top soil is dry
+and make sure the plant is not standing in water.
+Mist the plant every week as it prefers high humidity. The plant can be
+fertilized every 11 days. Make sure to clean the leaves every month for better
+light uptake.
+"""
+
+[common_issues]
+description = """
+### Drooping Leaves
+
+The reasons for drooping leaves can be:
+- overwatering
+- direct light
+- suboptimal temperature
+- suboptimal humidity
+- pests
+
+### Yellow Leaves
+
+When leaves age they naturally turn yellow. But yellowing might also 
+be caused by other factors like:
+- overwatering *or* underwatering
+- lighting issues
+- pests
+"""

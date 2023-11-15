@@ -1,0 +1,49 @@
+slug = "chlorophytum-comosum"
+name = "Spider Plant"
+bin_name = "Chlorophytum Comosum"
+
+[image]
+local = "chlorophytum-comosum.jpg"
+remote = "https://upload.wikimedia.org/wikipedia/commons/1/1b/Spider_Plant_%28Chlorophytum_comosum%29.jpg"
+format = "jpeg"
+source = "https://commons.wikimedia.org/wiki/File:Spider_Plant_(Chlorophytum_comosum).jpg"
+alt = """
+Spider Plant. \
+A plant with long narrow leaves in a dark green color. \
+The edges of the leaves are almost white. All leaves spread \
+from the center of the plant. There's no stalk.
+"""
+
+[temp]
+death = 0
+lower = 15
+upper = 25
+
+[site]
+description = """
+Place the Spider Plant in a spot with low light or indirect bright light. Do not expose it to direct sunlight. The Spider Plant is used to normal to slightly humid climate and prefers temperatures between 15°C and 25°C. It will die in temperatures below 0°C.
+"""
+light = "low - bright indirect"
+humidity = "normal - humid"
+
+[care]
+description = """
+The Spider Plant needs to be watered every week. Wait for the dirt to be almost completely dry. Mist the plant every week as it prefers slightly humid climate. Every two weeks fertiziler can be applied.
+"""
+water_schedule = "week"
+fertilize_schedule = "2 weeks"
+mist_schedule = "week"
+
+[common_issues]
+description = """
+### Brown Leaf Tips
+
+The air might be to dry. Mist your plant regularly (every week).
+
+### Dry Crispy Leaf Tips
+
+The plant does not get enough water.
+
+### Dark brown Leaf Tips
+
+The plant is being overwatered."""
