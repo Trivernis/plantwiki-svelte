@@ -1,22 +1,23 @@
-# create-svelte
+# Plantwiki ([live version](https://plantwiki.trivernis.dev))
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This repo is a website that contains information about my houseplants.
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+## How to build
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
+npm install
+npm run build
+```
 
-# create a new project in my-app
-npm create svelte@latest my-app
+Or build the container with
+
+```bash
+podman build .
 ```
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Install dependencies with `npm install` (or `pnpm install` or `yarn`) and start a development server:
 
 ```bash
 npm run dev
@@ -25,14 +26,6 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+## License
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+CNPLv7+
