@@ -15,5 +15,5 @@ steps:
       platforms: linux/amd64,linux/arm64/v8
       username: woodpeckerbot
       password:
-        from_secret: fogejo_token
+        from_secret: forgejo_token
     
