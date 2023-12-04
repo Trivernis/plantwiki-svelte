@@ -1,4 +1,4 @@
-# Plantwiki ([live version](https://plantwiki.trivernis.dev))
+# Plantwiki ([live version](https://plantwiki.trivernis.dev)) [![status-badge](https://ci.trivernis.dev/api/badges/1/status.svg)](https://ci.trivernis.dev/repos/1)
 
 This repo is a website that contains information about my houseplants.
 
