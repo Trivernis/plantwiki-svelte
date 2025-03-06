@@ -1,6 +1,14 @@
+version: 1
+when:
+  - event: [pull_request]
+  - event: push
+    branch:
+      - ${CI_REPO_DEFAULT_BRANCH}
+      - release/*
+      - fix/*
 steps:
   build:
     image: node:alpine
     commands:
       - npm ci
-      - npm run build
+      - npm run build    
